@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Within the Walls Virtual Tours</title>
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="description" content="Virtual Tours for Sale">
+  <meta name="keywords" content="VR, Virtual Tours, Boost Sales">
+  <meta name="author" content="Ano Karadaghi and Brandon Li">
+  <link rel = "icon" href =
+  "https://i.ibb.co/DYx2kh0/Logo.png"
+  type = "image/x-icon">
+</head>
+<body>
+<header>
+  <nav class="navigation">
+    <div class="navbar-logo" onclick = "location.href='index.html';">
+      <div style="float:left;">
+        <a><img src="https://i.ibb.co/DYx2kh0/Logo.png" alt="Logo" height="75" width="75"></a>
+      </div>
+      <div style="padding-top: 20px; display: inline-block;">
+        <a>Within the Walls Virtual Tours</a>
+      </div>
+    </div>
+    <div class="navbar-right">
+      <a href="about.html">About</a>
+      <a href="gallery.jsp">Gallery</a>
+      <a href="request.html">Request Quote</a>
+      <a href="contactus.html">Contact</a>
+    </div>
+    <div class="admin-log">
+        <a href ="#" onclick="document.getElementById('idLogin').style.display='block'" style="width:auto;">Admin Login</a>
+    </div>
+  </nav>
+  <div id="idLogin" class="modal">
+
+    <form class="modal-content animate" action="admin.jsp" method="post">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('idLogin').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <img src="https://i.ibb.co/DYx2kh0/Logo.png" alt="logo" class="logo">
+      </div>
+
+      <div class="container">
+        <label><b>Admin Username</b></label>
+        <input type="text" placeholder="Enter Admin Username" pattern = "admin" oninvalid="setCustomValidity('Incorrect Username')"  name="username" required>
+
+        <label><b>Admin Password</b></label>
+        <input type="password" placeholder="Enter Password"  pattern = "password" oninvalid="setCustomValidity('Incorrect Password')" name="password" required>
+
+        <button type="submit">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </div>
+
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('idLogin').style.display='none'" class="cancelbtn">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </form>
+  </div>
+  <script>
+  // Get the modal
+  var modal = document.getElementById('id01');
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
+  <br><br><br><br><br>
+  <h1>Contact Us</h1>
+  <p>Please feel free to reach out with any questions or if you’re interested at all!</p>
+  <p>Either fill out the contact form below or visit our Facebook page to instantly message us!</p>
+</header>
+  <form id = "contactus" action="WithinTheServlet" method="post">
+  	<input id="page" name="page" type="hidden" value="contact">
+    Name: <br>
+    <input type="text" id = "name" name="name" required>
+    <br>
+    Email: <br>
+    <input type = "email" id = "email" name ="email" required>
+    <br>
+    Subject: <br>
+    <input type = "text" name="subject" size = "100" required>
+    <br>
+    Message:
+    <input type = "text" name="message" size = "100" required>
+    <input type="submit" value="Submit">
+  </form>
+<footer>
+  <div class = "footer">
+    <p style="color: white; font-family: Chalkduster"> Find us on Social Media: </p>
+    <a href="https://www.facebook.com/WithintheWallsTours/"  target="_blank" class="fa fa-facebook"></a>
+    <a href="https://www.linkedin.com/company/within-the-walls-virtual-tours/"  target="_blank" class="fa fa-linkedin"></a>
+    <a href="https://www.instagram.com/withinthewallstours/"  target="_blank" class="fa fa-instagram"></a>
+  </div>
+</footer>
+</body>
+
+</html>
